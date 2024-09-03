@@ -1,22 +1,20 @@
 package org.example.tabletopgames;
 
+import javafx.application.Application;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 import java.sql.*;
 import java.util.regex.Pattern;
 
 public class Register {
-//      @FXML
-//      private Label nameLabel;
-//      @FXML
-//      private Label passwdLabel;
-//      @FXML
-//      private Label passwdLabel2;
-//    @FXML
-//    private Button registerButton = new Button();
-//    @FXML
-//    private Button resetButton = new Button();
+
     @FXML
     private TextField nameField = new TextField();
     @FXML
@@ -106,7 +104,11 @@ public class Register {
             resultSet.close();
             statement.close();
             connection.close();
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (ClassNotFoundException e) {
+            showAlert("错误", "数据库驱动未找到", Alert.AlertType.ERROR);
+            e.printStackTrace();
+        } catch (SQLException e) {
+            showAlert("错误", "数据库操作失败", Alert.AlertType.ERROR);
             e.printStackTrace();
         }
 
