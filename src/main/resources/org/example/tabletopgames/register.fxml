@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.tabletopgames.Register"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="638.0" prefWidth="862.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tabletopgames.Register">
+   <children>
+      <Pane fx:id="pane1" layoutX="55.0" layoutY="64.0" prefHeight="381.0" prefWidth="752.0">
+         <children>
+            <Label fx:id="nameLabel" contentDisplay="CENTER" layoutX="84.0" layoutY="70.0" prefHeight="75.0" prefWidth="105.0" text="账户" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="passwdLabel" layoutX="84.0" layoutY="153.0" prefHeight="75.0" prefWidth="105.0" text="密码" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="passwdLabel2" contentDisplay="CENTER" layoutX="84.0" layoutY="243.0" prefHeight="75.0" prefWidth="118.0" text="确定密码" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwdField" layoutX="245.0" layoutY="167.0" prefHeight="47.0" prefWidth="322.0" />
+            <TextField fx:id="nameField" layoutX="245.0" layoutY="90.0" prefHeight="47.0" prefWidth="322.0" />
+            <PasswordField fx:id="passwdField2" layoutX="245.0" layoutY="251.0" prefHeight="47.0" prefWidth="322.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane2" layoutX="55.0" layoutY="474.0" prefHeight="103.0" prefWidth="744.0">
+         <children>
+            <Button fx:id="registerButton" layoutX="145.0" layoutY="14.0" mnemonicParsing="false" onAction="#onRegisterButtonClick" prefHeight="75.0" prefWidth="126.0" text="注册">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Button>
+            <Button fx:id="resetButton" layoutX="413.0" layoutY="14.0" mnemonicParsing="false" onAction="#onResetButtonClick" prefHeight="75.0" prefWidth="137.0" text="重置">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>
